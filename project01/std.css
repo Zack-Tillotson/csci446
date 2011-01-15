@@ -1,0 +1,72 @@
+body {
+	width: 100%;
+	margin: 0px;
+	font-family: verdana, sans-serif;
+}
+
+div#title {
+	background: #CCCCCC;
+	padding: 10px;
+}
+div#title div#sitename {
+	font-size: 200%;
+	font-weight: bold;
+}
+div#title span#slogan {
+	font-size: 75%;
+	color: #666666;
+}
+
+div#menu {
+	background-color: black;
+	color: white;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-bottom: 5px;
+}
+div#menu ul {
+	margin: 0px;
+}
+div#menu li {
+	list-style-type: none;
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+div#menu a {
+	color: white;
+	text-decoration: none;	
+	font-weight: bold;
+}
+div#menu a:hover {
+	color: #9966FF;
+}
+
+div#content {
+	width: 57%
+}
+div#content table tr {
+	width: 50%;
+}
+
+div#status {
+	width: 38%;
+	display: inline;
+	float: right;
+	background-color: #F0F0FF;
+	margin-right: 5px;
+	padding: 5px;
+}
+div#status div#progress-title {
+	font-size: 110%;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+div#footer {
+	width: 100%;
+	background-color: #F0F0FF;
+	font-size: 75%;
+	padding: 5px 0px;
+	text-align: center;
+}
