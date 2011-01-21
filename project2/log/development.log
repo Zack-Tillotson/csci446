@@ -3065,3 +3065,31 @@ Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:20:26) [GET]
 Rendering template within layouts/products
 Rendering products/index
 Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:24:48) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:24:50) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2011-01-20 20:24:58) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2011-01-20 20:25:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"5af2030437bca25216540ce35bd1ec1262ac3f91", "product"=>{"price"=>"0.0", "image_url"=>"", "title"=>"", "description"=>""}}
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/products]
