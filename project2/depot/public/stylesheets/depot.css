@@ -1,0 +1,12 @@
+.list-line-odd {
+	background: #CCCCCC;
+}
+
+.list-line-even {
+	background: #FFFFFF;
+}
+
+img.list-image {
+	height: 150px;
+	width: 150px;
+}

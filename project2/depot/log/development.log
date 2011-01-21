@@ -643,3 +643,2425 @@ Processing ProductsController#create (for 127.0.0.1 at 2011-01-20 19:43:46) [POS
 Rendering template within layouts/products
 Rendering products/new
 Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20110121021546)
+Migrating to AddPriceToProduct (20110121022242)
+Migrating to AddTestData (20110121024603)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20110121021546)
+Migrating to AddPriceToProduct (20110121022242)
+Migrating to AddTestData (20110121024603)
+  [4;36;1mProduct Delete all (4.4ms)[0m   [0;1mDELETE FROM "products" WHERE 1=1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Super Shiny Space Suit') LIMIT 1[0m
+  [4;36;1mProduct Create (0.1ms)[0m   [0;1mINSERT INTO "products" ("price", "created_at", "title", "image_url", "updated_at", "description") VALUES(28.5, '2011-01-21 02:53:28', 'Super Shiny Space Suit', '/images/suit.jpg', '2011-01-21 02:53:28', '<p>This space suit will surely help you survive the surreal experience of being sent up to space in a slingshot</p>')[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Dull And Dreary Dress') LIMIT 1[0m
+  [4;36;1mProduct Create (0.2ms)[0m   [0;1mINSERT INTO "products" ("price", "created_at", "title", "image_url", "updated_at", "description") VALUES(10.99, '2011-01-21 02:53:28', 'Dull And Dreary Dress', '/images/dress.jpg', '2011-01-21 02:53:28', '<p>Do you delve into dark dwellings for dirty dances? This dress is for you! North Dakota sales tax applies.</p>')[0m
+  [4;35;1mSQL (7.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110121024603')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("products")[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 19:54:15) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2011-01-20 19:54:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/products/3]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 19:54:45) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2011-01-20 19:54:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/products/4]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 19:54:52) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:02:00) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:17: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for @products.each do |product| ; @output_buffer.concat "\n\t  <tr class=\""
+; @output_buffer.concat(( cycle('list-line-odd', 'list-line-even') ).to_s); @output_buffer.concat "\">\n\t    <td>"
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.description ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\t    <td>\n\t    \t"
+
+; @output_buffer.concat(( link_to 'Show', product ).to_s); @output_buffer.concat " <br />\n\t\t"
+; @output_buffer.concat(( link_to 'Edit', edit_product_path(product) ).to_s); @output_buffer.concat " <br />\n\t\t"
+; @output_buffer.concat(( link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n\t  </tr>\n\t"
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+
+
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:28:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:17: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^) on line #17 of app/views/products/index.html.erb:
+14: 		<%= link_to 'Edit', edit_product_path(product) %> <br />
+15: 		<%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %>
+16: 	  </tr>
+17: 	<% end %>
+18: 	</table>
+19: 
+20: </div>
+
+    app/views/products/index.html.erb:28:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (45.3ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.5ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:04:23) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for @products.each do |product| ; @output_buffer.concat "\n\t  <tr>\n\t    <td>"
+
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.description ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\t    <td>\n\t\t    "
+
+; @output_buffer.concat(( link_to 'Show', product ).to_s); @output_buffer.concat " <br />\n\t\t    "
+; @output_buffer.concat(( link_to 'Edit', edit_product_path(product) ).to_s); @output_buffer.concat " <br />\n\t\t    "
+; @output_buffer.concat(( link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n\t    </td>\n\t  </tr>\n\t"
+
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+
+
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:29:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^) on line #18 of app/views/products/index.html.erb:
+15: 		    <%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %>
+16: 	    </td>
+17: 	  </tr>
+18: 	<% end %>
+19: 	</table>
+20: 
+21: </div>
+
+    app/views/products/index.html.erb:29:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (13.8ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.5ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:05:13) [GET]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for @products.each do |product| ; @output_buffer.concat "\n\t  <tr>\n\t    <td>"
+
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.description ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\t    <td>\n\t\t    "
+
+; @output_buffer.concat(( link_to 'Show', product ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Edit', edit_product_path(product) ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n\t    </td>\n\t  </tr>\n\t"
+
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+
+
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:29:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^) on line #18 of app/views/products/index.html.erb:
+15: 		    <%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %>
+16: 	    </td>
+17: 	  </tr>
+18: 	<% end %>
+19: 	</table>
+20: 
+21: </div>
+
+    app/views/products/index.html.erb:29:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (47.3ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.5ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:05:20) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for @products.each do |product| ; @output_buffer.concat "\n\t  <tr>\n\t    <td>"
+
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.description ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\t    <td>\n\t\t    "
+
+; @output_buffer.concat(( link_to 'Show', product ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Edit', edit_product_path(product) ).to_s); @output_buffer.concat "<br/>\n\t\t    \n\t    </td>\n\t  </tr>\n\t"
+
+
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+
+
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:29:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n\n<br />\n\n"
+        ^) on line #18 of app/views/products/index.html.erb:
+15: 		    
+16: 	    </td>
+17: 	  </tr>
+18: 	<% end %>
+19: 	</table>
+20: 
+21: </div>
+
+    app/views/products/index.html.erb:29:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (15.2ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.4ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:05:31) [GET]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+        ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for @products.each do |product| ; @output_buffer.concat "\n\t  <tr>\n\t    <td>"
+
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.description ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\t    <td>\n\t\t    "
+
+; @output_buffer.concat(( link_to 'Show', product ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Edit', edit_product_path(product) ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n\t    </td>\n\t  </tr>\n\t"
+
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:27:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+        ^) on line #18 of app/views/products/index.html.erb:
+15: 		    <%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %>
+16: 	    </td>
+17: 	  </tr>
+18: 	<% end %>
+19: 	</table>
+20: 
+21: </div>
+
+    app/views/products/index.html.erb:27:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (47.3ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.5ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:05:48) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:14: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+        ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for @products.each do |product| ; @output_buffer.concat "\n\t  <tr>\n\t    <td>"
+
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.description ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\n\t  </tr>\n\t"
+
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:23:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:14: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+        ^) on line #14 of app/views/products/index.html.erb:
+11: 	    <td><%=h product.price %></td>
+12: 
+13: 	  </tr>
+14: 	<% end %>
+15: 	</table>
+16: 
+17: </div>
+
+    app/views/products/index.html.erb:23:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (13.8ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.4ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:05:54) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+        ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for @products.each do |product| ; @output_buffer.concat "\n\t  <tr>\n\t    <td>"
+
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.description ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\t    <td>\n\t\t    "
+
+; @output_buffer.concat(( link_to 'Show', product ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Edit', edit_product_path(product) ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n\t    </td>\n\t  </tr>\n\t"
+
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:28:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:18: syntax error, unexpected ';', expecting tCOLON2 or '[' or '.'
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+        ^) on line #18 of app/views/products/index.html.erb:
+15: 		    <%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %>
+16: 	    </td>
+17: 	  </tr>
+18: 	<% end %>
+19: 	</table>
+20: 
+21: </div>
+
+    app/views/products/index.html.erb:28:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (47.3ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.5ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:06:07) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:06:07) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:06:31) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:06:31) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:07:13) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:07:13) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:07:26) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:07:26) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:07:39) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:07:39) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:08:39) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:08:39) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:08:39) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/suit.jpg" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:08:39) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/dress.jpg" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:10:44) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:10:44) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:10:44) [GET]
+
+
+ActionController::RoutingError (No route matches "/images/suit.jpg" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:11:00) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:11:00) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:11:13) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+ERROR: compiling _run_erb_app47views47products47index46html46erb RAISED compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:class => 'list-image' product.image_url ).to_s); @output_bu...
+                              ^
+Function body:           def _run_erb_app47views47products47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"product_list\">\n\n\t<h1>Listing products</h1>\n\t\n\t<table>\n\t"
+
+
+
+
+;  for product in @products ; @output_buffer.concat "\n\t  <tr>\n\t    <td>\n\t    \t<dl>\n\t    \t\t<dt>"
+
+
+
+; @output_buffer.concat((h product.title ).to_s); @output_buffer.concat "</dt>\n\t    \t\t<dd>"
+; @output_buffer.concat(( product.description ).to_s); @output_buffer.concat "</td></dd>\n\t    \t</dl>\n\t    <td>Price: "
+
+; @output_buffer.concat((h product.price ).to_s); @output_buffer.concat "</td>\n\t    <td>"
+; @output_buffer.concat(( image_tag product.image_url, :class => 'list-image' product.image_url ).to_s); @output_buffer.concat "</td>\n\t    <td>\n\t\t    "
+
+; @output_buffer.concat(( link_to 'Show', product ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Edit', edit_product_path(product) ).to_s); @output_buffer.concat "<br/>\n\t\t    "
+; @output_buffer.concat(( link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n\t    </td>\n\t  </tr>\n\t"
+
+
+;  end ; @output_buffer.concat "\n\t</table>\n\n</div>\n<br/>\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'New product', new_product_path ).to_s); @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:31:in `compile!'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/memeyou/Documents/csci446/src/project2/depot/app/controllers/products_controller.rb:7:in `index'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/memeyou/Documents/csci446/src/project2/depot/app/views/products/index.html.erb:14: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:class => 'list-image' product.image_url ).to_s); @output_bu...
+                              ^) on line #14 of app/views/products/index.html.erb:
+11: 	    		<dd><%= product.description %></td></dd>
+12: 	    	</dl>
+13: 	    <td>Price: <%=h product.price %></td>
+14: 	    <td><%= image_tag product.image_url, :class => 'list-image' product.image_url %></td>
+15: 	    <td>
+16: 		    <%= link_to 'Show', product %><br/>
+17: 		    <%= link_to 'Edit', edit_product_path(product) %><br/>
+
+    app/views/products/index.html.erb:31:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (14.0ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.5ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:11:27) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:11:27) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:11:46) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 44ms (View: 40, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:11:46) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:11:47) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-20 20:11:47) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/depot.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/memeyou/Documents/csci446/src/project2/depot/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:12:47) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:12:49) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 43ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:13:35) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:13:36) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:14:13) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:14:18) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:14:19) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:14:26) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:14:39) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:15:25) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:15:26) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:15:47) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:15:49) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:16:21) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:19:12) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:19:59) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:19:59) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:20:01) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:20:12) [GET]
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:20:15) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2011-01-20 20:20:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/products/4]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-01-20 20:20:26) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/products]
