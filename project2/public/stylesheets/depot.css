@@ -10,3 +10,54 @@ img.list-image {
 	height: 150px;
 	width: 150px;
 }
+
+#banner {
+	background: #9c9;
+	color: #282;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-bottom: 2px solid;
+	font: small-caps 40px/40px "Times New Roman", serif;
+	height: 200px;
+}
+
+#banner img {
+	float: left;
+}
+
+#columns {
+	clear: left;
+	background: #141;
+}
+
+#main {
+	margin-left: 13em;
+	padding-top: 4ex;
+	padding-left: 2em;
+	background: white;
+}
+
+#side {
+	float: left;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding: bottom: 1em;
+	width: 12em;
+	background: #141;
+}
+
+#side a {
+	color: #bfb;
+}
+	
+#store .entry form, #store .entry form div {
+	display: inline;
+}
+
+#notice {
+	border: 2px solid red;
+	padding: 1em; 
+	margin-bottom: 2em;
+	font: bold smaller sans-serif;
+}

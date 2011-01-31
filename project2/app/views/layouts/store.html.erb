@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>The Stuff Store</title>
+		<%= stylesheet_link_tag "depot", :media => "all" %>
+	</head>
+	<body id="store">
+		<div id="banner">
+			<%= image_tag("logo.png") %>
+			<%= @page_title || "The Stuff Store"%>
+		</div>
+		<div id="columns">
+			<div id="side">
+				<a href="http://www....">Home</a><br />
+				<a href="http://www..../faq">Questions</a><br />
+				<a href="http://www..../news">News</a><br />
+				<a href="http://www..../contact">Contact</a><br />
+			</div>
+			<div id="main">
+				<% if flash[:notice] -%>
+					<div id="notice"><%= flash[:notice] %></div>
+				<% end -%>
+
+				<%= yield :layout %>
+			</div>
+		</div>
+	</body>
+</html>
