@@ -6497,3 +6497,163 @@ Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:35:33) [GET]
 Rendering template within layouts/store
 Rendering store/index
 Completed in 10ms (View: 7, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:56:24) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.3ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:56:26) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.8ms)
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:56:27) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.8ms)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:56:29) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.8ms)
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-01-30 17:56:34) [POST]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  Parameters: {"authenticity_token"=>"e311a9ba540d22a747a99d58b2932ccb709599f2", "id"=>"4"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering template within layouts/store
+Rendering store/add_to_cart
+Rendered store/_cart_item (36.5ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.3ms)
+Completed in 48ms (View: 42, DB: 1) | 200 OK [http://localhost/store/add_to_cart/4]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:56:42) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.8ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/store/]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:56:44) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (1.8ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/store/]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-01-30 17:57:43) [POST]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  Parameters: {"authenticity_token"=>"e311a9ba540d22a747a99d58b2932ccb709599f2", "id"=>"3"}
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+
+
+ArgumentError (wrong number of arguments (0 for 1)):
+    /app/controllers/store_controller.rb:12:in `redirect_to_index'
+    /app/controllers/store_controller.rb:12:in `add_to_cart'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/memeyou/Documents/csci446/src/project2/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (11.4ms)
+Rendered /home/memeyou/Documents/csci446/src/project2/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (3.4ms)
+Rendering /home/memeyou/Documents/csci446/src/project2/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-01-30 17:57:59) [POST]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  Parameters: {"authenticity_token"=>"e311a9ba540d22a747a99d58b2932ccb709599f2", "id"=>"3"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://localhost/store/add_to_cart/3]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:57:59) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (2.2ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-01-30 17:58:02) [GET]
+  Session ID: 5744a3ab442826a146c06d6539186af3
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart_item (0.4ms)
+Rendered store/_cart (2.3ms)
+Completed in 12ms (View: 10, DB: 1) | 200 OK [http://localhost/store]
