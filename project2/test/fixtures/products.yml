@@ -1,11 +1,5 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  title: MyString
-  description: MyText
-  image_url: MyString
-
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
+book:
+  title: book
+  description: a book
+  price: 134
+  image_url: book.png

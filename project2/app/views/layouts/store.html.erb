@@ -7,18 +7,31 @@
 	</head>
 	<body id="store">
 		<div id="banner">
+			<% form_tag '', :method => 'GET', :class => 'locale' do %>
+				<%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale), :onchange => 'this.form.submit()' %>
+				<%= submit_tag 'submit' %>
+				<%= javascript_tag "$$('.locale inpt').each(Element.hide)" %>
+			<% end %>
 			<%= image_tag("logo.png") %>
-			<%= @page_title || "The Stuff Store"%>
+			<%= @page_title || I18n.t('layout.title') %>
 		</div>
 		<div id="columns">
 			<div id="side">
-				<% hidden_div_if(@cart.items.empty?, :id => "cart") do %>
-					<%= render(:partial => "cart", :object => @cart) %>
+				<% if @cart %>
+					<% hidden_div_if(@cart.items.empty?, :id => "cart") do %>
+						<%= render(:partial => "cart", :object => @cart) %>
+					<% end %>
 				<% end %>
-				<a href="http://www....">Home</a><br />
-				<a href="http://www..../faq">Questions</a><br />
-				<a href="http://www..../news">News</a><br />
-				<a href="http://www..../contact">Contact</a><br />
+				<a href="http://www...."><%= I18n.t 'layout.side.home' %></a><br />
+				<a href="http://www..../faq"><%= I18n.t 'layout.side.questions' %></a><br />
+				<a href="http://www..../news"></a><%= I18n.t 'layout.side.news' %><br />
+				<a href="http://www..../contact"></a><%= I18n.t 'layout.side.contact' %><br />
+				<% if session[:userid] -%>
+					<br />
+					<%= link_to 'Orders', :controller => 'orders' %><br />
+					<%= link_to 'Products', :controller => 'products' %><br />
+					<%= link_to 'Users', :controller => 'users' %><br />
+				<% end -%>
 			</div>
 			<div id="main">
 				<% if flash[:notice] -%>
