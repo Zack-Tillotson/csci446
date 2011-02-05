@@ -1,5 +1,5 @@
 <div id="menu-section">
-	<%= link_to 'List All Documents', documents_path %>
+  <%= link_to 'List All Documents', documents_path %>
 	<%= link_to 'Edit', edit_document_path(@document) %> 
 	<%= link_to 'Delete', @document, :confirm => 'Are you sure?', :method => :delete %> 
 	<%= link_to 'Email', :action => :email_the_doc %>

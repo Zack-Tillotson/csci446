@@ -1,30 +1,26 @@
-<h1>New document</h1>
+<div id="menu-section">
+	<%= link_to 'List All Documents', documents_path %>
+</div>
+
+<h1>Creating a New Article</h1>
 
 <% form_for(@document) do |f| %>
   <%= f.error_messages %>
 
-  <p>
+  <p class="doc_item">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
-  <p>
-    <%= f.label :author %><br />
+  <p class="doc_item">
+    <%= f.label "Author Name" %><br />
     <%= f.text_field :author %>
   </p>
-  <p>
+  <p class="doc_item">
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.label :create_date %><br />
-    <%= f.date_select :create_date %>
-  </p>
-  <p>
-    <%= f.label :edit_count %><br />
-    <%= f.text_field :edit_count %>
-  </p>
-  <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "Create!" %>
   </p>
 <% end %>
 

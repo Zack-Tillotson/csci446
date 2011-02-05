@@ -1,32 +1,26 @@
-<h1>Editing document</h1>
+<div id="menu-section">
+	<%= link_to "Back", :back %>
+</div>
 
 <% form_for(@document) do |f| %>
+
+<h1>Editing "<%=h @document.title%>"</h1>
+
   <%= f.error_messages %>
 
-  <p>
+  <p class="doc_item">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
-  <p>
+  <p class="doc_item">
     <%= f.label :author %><br />
     <%= f.text_field :author %>
   </p>
-  <p>
+  <p class="doc_item">
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.label :create_date %><br />
-    <%= f.date_select :create_date %>
-  </p>
-  <p>
-    <%= f.label :edit_count %><br />
-    <%= f.text_field :edit_count %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Save!" %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @document %> |
-<%= link_to 'Back', documents_path %>
