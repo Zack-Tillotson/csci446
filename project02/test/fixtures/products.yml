@@ -1,0 +1,5 @@
+book:
+  title: book
+  description: a book
+  price: 134
+  image_url: book.png
