@@ -1,0 +1,31 @@
+<h1>New document</h1>
+
+<% form_for(@document) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :create_date %><br />
+    <%= f.date_select :create_date %>
+  </p>
+  <p>
+    <%= f.label :edit_count %><br />
+    <%= f.text_field :edit_count %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', documents_path %>

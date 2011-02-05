@@ -1,0 +1,17 @@
+<div id="menu-section">
+	<%= link_to 'List All Documents', documents_path %>
+	<%= link_to 'Edit', edit_document_path(@document) %> 
+	<%= link_to 'Delete', @document, :confirm => 'Are you sure?', :method => :delete %> 
+	<%= link_to 'Email', :action => :email_the_doc %>
+</div>
+<h1>
+  <%=h @document.title %>
+</h1>
+
+<p class="document-details">
+  by <%=h @document.author %>. <%=h @document.edit_count %> edits since <%=h @document.create_date %>
+</p>
+
+<div id="document-body">
+  <%=h @document.body %>
+</p>
