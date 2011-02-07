@@ -44,9 +44,9 @@ class DocumentsController < ApplicationController
 
     respond_to do |format|
       if @document.save
-        flash[:notice] = 'Document was successfully created.'
-        format.html { redirect_to(@document) }
+        format.html { redirect_to :back }
         format.xml  { render :xml => @document, :status => :created, :location => @document }
+        flash[:notice] = 'Document was successfully created.'
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @document.errors, :status => :unprocessable_entity }
@@ -61,8 +61,10 @@ class DocumentsController < ApplicationController
 
     respond_to do |format|
       if @document.update_attributes(params[:document])
+        @document.edit_count += 1
+        @document.update_attributes(params[:document])
         flash[:notice] = 'Document was successfully updated.'
-        format.html { redirect_to(@document) }
+        format.html { redirect_to :back }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

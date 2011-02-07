@@ -1,6 +1,5 @@
 <div id="menu-section">
   <%= link_to image_tag("/images/famfamfam_silk_icons_v013/arrow_left.png", :alt => 'List All Documents')+"List All Documents", documents_path %>
-
 	<%= link_to image_tag("/images/famfamfam_silk_icons_v013/page_edit.png", :alt => 'Edit This Document')+'Edit', edit_document_path(@document) %> 
 	<%= link_to image_tag("/images/famfamfam_silk_icons_v013/page_delete.png", :alt => 'Delete This Document')+'Delete', @document, :confirm => 'Are you sure?', :method => :delete %> 
 	<%= mail_to "", image_tag("/images/famfamfam_silk_icons_v013/email.png", :alt => 'Email A Link For This Document')+'Email', :body=> url_for(:id => @document.id, :only_path => false), :subject => @document.title, :encode => "javascript" %>
@@ -14,5 +13,5 @@
 </p>
 
 <div id="document-body">
-  <%=h @document.body %>
-</p>
+  <%= simple_format h(@document.body) %>
+</div>

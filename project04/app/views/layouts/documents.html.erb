@@ -6,9 +6,16 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Documents: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'main' %>
 </head>
 <body>
-
+<div class="title-bar">
+  <div class="title-words">Articl.es</div>
+  <% 
+    subtitles = ["My cousin works at bit.ly", "what's article in spanish anyways?", "not just for spain", "with a name .com hipsters love"]
+  %>
+  <div class="subtitle-words"><%= "..." + subtitles[rand(subtitles.length)] %></div>
+</div>
 <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield  %>
