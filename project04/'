@@ -1,0 +1,24 @@
+<%= link_to "Back", :back %>
+
+<% form_for(@document) do |f| %>
+
+<h1>Editing "<%=h @document.title%>"</h1>
+
+  <%= f.error_messages %>
+
+  <p class="edit-item">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p class="edit-item">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p class="edit-item">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
