@@ -1,0 +1,31 @@
+<h1>All The Worlds Articles</h1>
+<div class="new-item-link">
+  <%= link_to image_tag("/images/famfamfam_silk_icons_v013/page_add.png", :alt => 'New document') + " Create Article", new_document_path %>
+</div>
+<div class="limited-box">
+  <table>
+    <tr>
+      <th class="title-back">Title</th>
+      <th class="title-back">Author Name</th>
+      <th class="title-back">Body</th>
+      <th class="title-back">Create date</th>
+      <th />
+      <th />
+      <th />
+    </tr>
+  <% for document in @documents -%>
+    <tr class="<%= cycle("even", "odd") %>">
+      <td><%=h document.title %></td>
+      <td><%=h document.author %></td>
+      <td><%=h document.body[0, 50] %></td>
+      <td><%=h document.create_date %></td>
+      <td><%= link_to image_tag("/images/famfamfam_silk_icons_v013/page_white_magnify.png", :alt => 'View This Document'), document %></td>
+      <td><%= link_to image_tag("/images/famfamfam_silk_icons_v013/page_edit.png", :alt => 'Edit This Document'), edit_document_path(document) %></td>
+      <td><%= link_to image_tag("/images/famfamfam_silk_icons_v013/page_delete.png", :alt => 'Delete This Document'), document, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end -%>
+  </table>
+  <div>
+    <%= @documents.length %> <%= if(@documents.length != 1) then "Articles" else "Article" end %>
+  </div>
+</table>

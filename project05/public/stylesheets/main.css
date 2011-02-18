@@ -1,0 +1,66 @@
+body {
+  margin-left: 20px;
+  width: 960px;
+}
+
+div.title-bar {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+div.title-bar div.title-words {
+  font-size: 40px;
+}
+
+div.title-bar div.subtitle-words {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+div#menu-section {
+  font-size: 15px;
+  margin-left: -70px;
+}
+
+div#menu-section a {
+  margin-left: 70px;
+  text-decoration: none;
+}
+
+div#document-body p {
+  margin-top: 20px;
+}
+
+p.doc-item {
+}
+
+p.doc-item label {
+  margin-left: 10px;
+  width: 160px;
+  text-align: right;
+}
+
+p.doc-item input {
+}
+
+th.title-back {
+  background-color: #999;
+}
+
+tr.even td {
+  background-color: #ccc;
+}
+
+div.new-item-link {
+  float: left;
+  font-size: 15px;
+  margin-left: 600px;
+  margin-top: -30px;
+}
+
+div.limited-box {
+  height: 100px;
+  overflow-y: scroll;
+}
+
