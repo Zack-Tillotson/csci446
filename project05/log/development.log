@@ -10170,3 +10170,138 @@ Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:46:11) [GET]
 Rendering template within layouts/authors
 Rendering authors/index
 Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:15) [GET]
+  [4;35;1mDocument Load (0.4ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (0.2ms)[0m   [0;1mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:17) [GET]
+  [4;36;1mDocument Load (0.4ms)[0m   [0;1mSELECT * FROM "documents" [0m
+  [4;35;1mDocument Load (0.2ms)[0m   [0mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:18) [GET]
+  [4;35;1mDocument Load (0.4ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (0.2ms)[0m   [0;1mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:18) [GET]
+  [4;36;1mDocument Load (0.4ms)[0m   [0;1mSELECT * FROM "documents" [0m
+  [4;35;1mDocument Load (0.2ms)[0m   [0mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:18) [GET]
+  [4;35;1mDocument Load (0.4ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (0.2ms)[0m   [0;1mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:19) [GET]
+  [4;36;1mDocument Load (0.4ms)[0m   [0;1mSELECT * FROM "documents" [0m
+  [4;35;1mDocument Load (0.2ms)[0m   [0mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:37) [GET]
+  [4;35;1mDocument Load (0.4ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (0.2ms)[0m   [0;1mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+
+ActionView::TemplateError (undefined method `get_subtitles' for #<ActionView::Base:0x7f39bbfd0768>) on line #14 of app/views/layouts/documents.html.erb:
+11: <body>
+12: <div class="title-bar">
+13:   <div class="title-words">Articl.es</div>
+14:   <div class="subtitle-words"><%= "..." + get_subtitles() %></div>
+15: </div>
+16: <p style="color: green"><%= flash[:notice] %></p>
+17: 
+
+    app/views/layouts/documents.html.erb:14
+    app/controllers/documents_controller.rb:10:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:40) [GET]
+  [4;36;1mDocument Load (0.6ms)[0m   [0;1mSELECT * FROM "documents" [0m
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:42) [GET]
+  [4;35;1mDocument Load (0.4ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (0.2ms)[0m   [0;1mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:42) [GET]
+  [4;36;1mDocument Load (0.4ms)[0m   [0;1mSELECT * FROM "documents" [0m
+  [4;35;1mDocument Load (0.2ms)[0m   [0mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:51:43) [GET]
+  [4;35;1mDocument Load (0.4ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/documents]

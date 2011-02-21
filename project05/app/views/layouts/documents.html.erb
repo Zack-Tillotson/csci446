@@ -11,10 +11,7 @@
 <body>
 <div class="title-bar">
   <div class="title-words">Articl.es</div>
-  <% 
-    subtitles = ["My cousin works at bit.ly", "what's article in spanish anyways?", "not just for spain", "with a name .com hipsters love"]
-  %>
-  <div class="subtitle-words"><%= "..." + subtitles[rand(subtitles.length)] %></div>
+  <div class="subtitle-words"><%= "..." + get_subtitle() %></div>
 </div>
 <p style="color: green"><%= flash[:notice] %></p>
 
