@@ -1,8 +1,11 @@
 class DocumentsController < ApplicationController
+
   # GET /documents
   # GET /documents.xml
   def index
     @documents = Document.find(:all)
+
+    @docPages = Document.paginate(:page => params[:page], :order => 'create_date DESC')
 
     respond_to do |format|
       format.html # index.html.erb

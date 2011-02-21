@@ -60,7 +60,7 @@ div.new-item-link {
 }
 
 div.limited-box {
-  height: 100px;
-  overflow-y: scroll;
+--  height: 100px;
+--  overflow-y: scroll;
 }
 

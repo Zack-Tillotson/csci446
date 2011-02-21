@@ -2,6 +2,7 @@
 <div class="new-item-link">
   <%= link_to image_tag("/images/famfamfam_silk_icons_v013/page_add.png", :alt => 'New document') + " Create Article", new_document_path %>
 </div>
+<%= will_paginate @docPages %>
 <div class="limited-box">
   <table>
     <tr>
@@ -25,7 +26,10 @@
     </tr>
   <% end -%>
   </table>
+<%= will_paginate @docPages %>
+<!--
   <div>
-    <%= @documents.length %> <%= if(@documents.length != 1) then "Articles" else "Article" end %>
+    Displaying <%= pluralize(@docPages.length, "Article") %>
   </div>
+-->
 </table>
