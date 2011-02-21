@@ -7884,3 +7884,1395 @@ Migrating to CreateAuthors (20110221041220)
 [0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("authors")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("documents")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to CreateAuthors (20110221041220)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("authors")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("documents")[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:13:53) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/authors/]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 21:13:57) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 21:16:58) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:17:03) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>""}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+
+NameError (undefined local variable or method `author' for #<Author id: nil, name: "", created_at: nil, updated_at: nil>):
+  app/models/author.rb:8:in `no_author_of_ill_repute'
+  app/controllers/authors_controller.rb:46
+  app/controllers/authors_controller.rb:45:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.7ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:18:19) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>""}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+
+NameError (undefined local variable or method `author' for #<Author id: nil, name: "", created_at: nil, updated_at: nil>):
+  app/models/author.rb:8:in `no_author_of_ill_repute'
+  app/controllers/authors_controller.rb:46
+  app/controllers/authors_controller.rb:45:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:18:23) [GET]
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 21:18:24) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:18:24) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>""}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+
+NameError (undefined local variable or method `author' for #<Author id: nil, name: "", created_at: nil, updated_at: nil>):
+  app/models/author.rb:8:in `no_author_of_ill_repute'
+  app/controllers/authors_controller.rb:46
+  app/controllers/authors_controller.rb:45:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:18:36) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>""}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to AddAuthorPic (20110220000000)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to AddAuthorPic (20110220000000)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to AddAuthorPic (20110220000000)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to AddAuthorPic (20110220000000)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to AddAuthorPic (20110220000000)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to CreateAuthors (20110221041220)
+Migrating to AddPicToAuthor (20110221044159)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "authors" ADD "pic_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mALTER TABLE "authors" ADD "pic_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mALTER TABLE "authors" ADD "pic_file_size" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mALTER TABLE "authors" ADD "pic_updated_at" datetime[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110221044159')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:43:05) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 21:43:06) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 42ms (View: 38, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:43:20) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>"A Test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+  [4;35;1mAuthor Create (0.2ms)[0m   [0mINSERT INTO "authors" ("name", "created_at", "pic_content_type", "updated_at", "pic_updated_at", "pic_file_size", "pic_file_name") VALUES('A Test', '2011-02-21 04:43:20', NULL, '2011-02-21 04:43:20', NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+Redirected to http://0.0.0.0:3000/authors/1
+Completed in 12ms (DB: 0) | 302 Found [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 21:43:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+
+ActionView::TemplateError (undefined method `avatar' for #<Author:0x7fbf5d51b070>) on line #7 of app/views/authors/show.html.erb:
+4: </p>
+5: <p>
+6:   <b>Pic:</b>
+7:   <%=image_tag @author.avatar.url %>
+8: </p>
+9: <p>
+10:   <% form_for :author, @author, :url => user_path, :html => { :multipart => true } do |form| %>
+
+    app/views/authors/show.html.erb:7
+    app/controllers/authors_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.3ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 21:43:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+
+ActionView::TemplateError (undefined local variable or method `user_path' for #<ActionView::Base:0x7fbf5d1f37d0>) on line #10 of app/views/authors/show.html.erb:
+7:   <%=image_tag @author.pic.url %>
+8: </p>
+9: <p>
+10:   <% form_for :author, @author, :url => user_path, :html => { :multipart => true } do |form| %>
+11:     <%= form.file_field :avatar %>
+12:   <% end %>
+13: </p>
+
+    app/views/authors/show.html.erb:10
+    app/controllers/authors_controller.rb:18:in `show'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 21:44:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 21:44:10) [GET]
+
+ActionController::RoutingError (No route matches "/pics/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:44:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+
+ActionView::TemplateError (undefined local variable or method `user_path' for #<ActionView::Base:0x7fbf5d2088d8>) on line #11 of app/views/authors/edit.html.erb:
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <p>
+11:     <% form_for :author, @author, :url => user_path, :html => { :multipart => true } do |form| %>
+12:       <%= form.file_field :avatar %>
+13:     <% end %>
+14:   </p>
+
+    app/views/authors/edit.html.erb:11
+    app/views/authors/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:45:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+
+ActionView::TemplateError (undefined local variable or method `user_path' for #<ActionView::Base:0x7fbf5d340840>) on line #11 of app/views/authors/edit.html.erb:
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <p>
+11:     <% form_for :author, @author, :url => user_path, :html => { :multipart => true } do |form| %>
+12:       <%= form.file_field :pic %>
+13:     <% end %>
+14:   </p>
+
+    app/views/authors/edit.html.erb:11
+    app/views/authors/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:46:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+
+ActionView::TemplateError (undefined local variable or method `file_name' for #<ActionView::Base:0x7fbf5d4e8c38>) on line #11 of app/views/authors/edit.html.erb:
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <p>
+11:     <% form_for :author, @author, :url => file_name, :html => { :multipart => true } do |form| %>
+12:       <%= form.file_field :pic %>
+13:     <% end %>
+14:   </p>
+
+    app/views/authors/edit.html.erb:11
+    app/views/authors/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:46:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+
+ActionView::TemplateError (undefined local variable or method `pic_file_name' for #<ActionView::Base:0x7fbf5d1e6fd0>) on line #11 of app/views/authors/edit.html.erb:
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <p>
+11:     <% form_for :author, @author, :url => pic_file_name, :html => { :multipart => true } do |form| %>
+12:       <%= form.file_field :pic %>
+13:     <% end %>
+14:   </p>
+
+    app/views/authors/edit.html.erb:11
+    app/views/authors/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:48:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validates_attachment_presense' for #<Class:0x7fbf5d315a00>):
+  /home/memeyou/.gem/ruby/1.8/gems/will_paginate-2.3.15/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/models/author.rb:4
+  app/controllers/authors_controller.rb:37:in `edit'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (21.7ms)
+Rendered rescues/_request_and_response (36.5ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:48:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+
+ActionView::TemplateError (undefined local variable or method `pic_file_name' for #<ActionView::Base:0x7fbf5d62eae8>) on line #11 of app/views/authors/edit.html.erb:
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <p>
+11:     <% form_for :author, @author, :url => pic_file_name, :html => { :multipart => true } do |form| %>
+12:       <%= form.file_field :pic %>
+13:     <% end %>
+14:   </p>
+
+    app/views/authors/edit.html.erb:11
+    app/views/authors/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (23.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:48:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+
+ActionView::TemplateError (undefined local variable or method `pic_file_name' for #<ActionView::Base:0x7fbf5d2db8c8>) on line #11 of app/views/authors/edit.html.erb:
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <p>
+11:     <% form_for :author, @author, :url => pic_file_name, :html => { :multipart => true } do |form| %>
+12:       <%= form.file_field :pic %>
+13:     <% end %>
+14:   </p>
+
+    app/views/authors/edit.html.erb:11
+    app/views/authors/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:49:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/authors/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 21:49:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 21:49:28) [GET]
+
+ActionController::RoutingError (No route matches "/pics/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:49:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 46ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:51:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:51:20) [GET]
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+
+ActionView::TemplateError (undefined method `path_to_pic' for #<Author:0x7fbf5d4834f0>) on line #11 of app/views/authors/index.html.erb:
+8: <% @authors.each do |author| %>
+9:   <tr>
+10:     <td><%=h author.name %></td>
+11:     <td><%=h author.path_to_pic %></td>
+12:     <td><%= link_to 'Show', author %></td>
+13:     <td><%= link_to 'Edit', edit_author_path(author) %></td>
+14:     <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/authors/index.html.erb:11
+    app/views/authors/index.html.erb:8:in `each'
+    app/views/authors/index.html.erb:8
+    app/controllers/authors_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:51:22) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+
+ActionView::TemplateError (undefined method `path_to_pic' for #<Author:0x7fbf5d65edd8>) on line #11 of app/views/authors/index.html.erb:
+8: <% @authors.each do |author| %>
+9:   <tr>
+10:     <td><%=h author.name %></td>
+11:     <td><%=h author.path_to_pic %></td>
+12:     <td><%= link_to 'Show', author %></td>
+13:     <td><%= link_to 'Edit', edit_author_path(author) %></td>
+14:     <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/authors/index.html.erb:11
+    app/views/authors/index.html.erb:8:in `each'
+    app/views/authors/index.html.erb:8
+    app/controllers/authors_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:51:49) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+
+ActionView::TemplateError (undefined method `path_file_name' for #<Author:0x7fbf5d2f8838>) on line #11 of app/views/authors/index.html.erb:
+8: <% @authors.each do |author| %>
+9:   <tr>
+10:     <td><%=h author.name %></td>
+11:     <td><%=h author.path_file_name %></td>
+12:     <td><%= link_to 'Show', author %></td>
+13:     <td><%= link_to 'Edit', edit_author_path(author) %></td>
+14:     <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/authors/index.html.erb:11
+    app/views/authors/index.html.erb:8:in `each'
+    app/views/authors/index.html.erb:8
+    app/controllers/authors_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:52:00) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 21:52:03) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+
+ActionView::TemplateError (author_url failed to generate from {:action=>"show", :controller=>"authors"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["authors", :id] - are they all satisfied?) on line #10 of app/views/authors/new.html.erb:
+7:     <%= f.label :name %><br />
+8:     <%= f.text_field :name %>
+9:   </p>
+10:   <% form_for :author, @author, :url => author_path, :html => { :multipart => true } do |form| %>
+11:     <%= form.file_field :pic %>
+12:   <% end %>
+13:   <p>
+
+    (eval):17:in `author_path'
+    app/views/authors/new.html.erb:10
+    app/views/authors/new.html.erb:3
+    app/controllers/authors_controller.rb:29:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 21:53:33) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:53:40) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"photo"=>"IMG_0307.JPG", "name"=>"b test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: photo):
+  app/controllers/authors_controller.rb:43:in `new'
+  app/controllers/authors_controller.rb:43:in `create'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (19.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 21:53:50) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 45ms (View: 41, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:53:54) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>"b test", "pic"=>"IMG_0308.JPG"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:54:01) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>"b test", "pic"=>"IMG_0308.JPG"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:54:32) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>"b test", "pic"=>"IMG_0308.JPG"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:55:22) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>"b test", "pic"=>"IMG_0312.JPG"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 21:55:29) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>"b test", "pic"=>"IMG_0309.JPG"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:56:39) [GET]
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:56:41) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 21:56:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 21:56:42) [GET]
+
+ActionController::RoutingError (No route matches "/pics/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:56:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 45ms (View: 40, DB: 0) | 200 OK [http://0.0.0.0/authors/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 21:57:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:57:04) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 21:57:05) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 21:57:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 21:57:06) [GET]
+
+ActionController::RoutingError (No route matches "/pics/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDocuments (20110205223000)
+Migrating to CreateAuthors (20110221041220)
+Migrating to AddAttachmentsPhotoToAuthor (20110221050041)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "authors" ADD "photo_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "authors" ADD "photo_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mALTER TABLE "authors" ADD "photo_file_size" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mALTER TABLE "authors" ADD "photo_updated_at" datetime[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110221050041')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documents")[0m
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:02:38) [GET]
+  [4;36;1mAuthor Load (0.4ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/authors/]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 22:02:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/rails.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:02:44) [GET]
+  [4;35;1mDocument Load (0.3ms)[0m   [0mSELECT * FROM "documents" [0m
+  [4;36;1mDocument Load (0.2ms)[0m   [0;1mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/documents/]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#show (for 127.0.0.1 at 2011-02-20 22:02:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mDocument Load (0.1ms)[0m   [0;1mSELECT * FROM "documents" WHERE ("documents"."id" = 1) [0m
+Rendering template within layouts/documents
+Rendering documents/show
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/documents/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#edit (for 127.0.0.1 at 2011-02-20 22:02:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mDocument Load (0.2ms)[0m   [0mSELECT * FROM "documents" WHERE ("documents"."id" = 1) [0m
+Rendering template within layouts/documents
+Rendering documents/edit
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/documents/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing DocumentsController#index (for 127.0.0.1 at 2011-02-20 22:03:13) [GET]
+  [4;36;1mDocument Load (0.3ms)[0m   [0;1mSELECT * FROM "documents" [0m
+  [4;35;1mDocument Load (0.2ms)[0m   [0mSELECT * FROM "documents" ORDER BY create_date DESC LIMIT 2 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documents" [0m
+Rendering template within layouts/documents
+Rendering documents/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/documents]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:03:21) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 22:03:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 22:03:23) [GET]
+
+ActionController::RoutingError (No route matches "/pics/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:06:44) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 22:06:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 42ms (View: 38, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 22:06:46) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 22:06:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/authors/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#update (for 127.0.0.1 at 2011-02-20 22:06:50) [PUT]
+  Parameters: {"commit"=>"Update", "author"=>{"photo"=>"IMG_0307.JPG", "name"=>"A Test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4=", "id"=>"1"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 22:07:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 22:07:42) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 22:07:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 44ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors/1/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:07:47) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 22:07:48) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 22:07:57) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"photo"=>#<File:/tmp/RackMultipart20110220-11209-1twusay-0>, "name"=>"c"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-sdu1wl-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-sdu1wl-0.JPG[0]' -resize "300x300>" '/tmp/stream20110220-11209-sdu1wl-020110220-11209-145bxa6-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-sdu1wl-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-sdu1wl-0.JPG[0]' -resize "100x100>" '/tmp/stream20110220-11209-sdu1wl-020110220-11209-13ix75w-0' 2>/dev/null
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 1307ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:09:25) [GET]
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 22:09:27) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 45ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 22:09:33) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"photo"=>#<File:/tmp/RackMultipart20110220-11209-1fekeno-0>, "name"=>"d test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-etba1s-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-etba1s-0.JPG[0]' -resize "300x300>" '/tmp/stream20110220-11209-etba1s-020110220-11209-d3tfjk-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-etba1s-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-etba1s-0.JPG[0]' -resize "100x100>" '/tmp/stream20110220-11209-etba1s-020110220-11209-1to1u7f-0' 2>/dev/null
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 1072ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:09:53) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 22:09:55) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 22:10:00) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"photo"=>#<File:/tmp/RackMultipart20110220-11209-13ubaie-0>, "name"=>"e test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-1indr7z-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-1indr7z-0.JPG[0]' -resize "300x300>" '/tmp/stream20110220-11209-1indr7z-020110220-11209-1ljdi0y-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-1indr7z-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-1indr7z-0.JPG[0]' -resize "100x100>" '/tmp/stream20110220-11209-1indr7z-020110220-11209-tyuf7x-0' 2>/dev/null
+  [4;36;1mAuthor Create (0.3ms)[0m   [0;1mINSERT INTO "authors" ("name", "created_at", "pic_content_type", "photo_file_size", "updated_at", "pic_updated_at", "photo_file_name", "photo_content_type", "pic_file_size", "photo_updated_at", "pic_file_name") VALUES('e test', '2011-02-21 05:10:01', NULL, 2804008, '2011-02-21 05:10:01', NULL, 'IMG_0311.JPG', 'image/jpeg', NULL, '2011-02-21 05:10:00', NULL)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/2/medium/IMG_0311.JPG
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/2/thumb/IMG_0311.JPG
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/2/original/IMG_0311.JPG
+Redirected to http://0.0.0.0:3000/authors/2
+Completed in 1199ms (DB: 0) | 302 Found [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 22:10:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/authors/2]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:10:05) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 36ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#destroy (for 127.0.0.1 at 2011-02-20 22:10:09) [DELETE]
+  Parameters: {"authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4=", "id"=>"1"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mAuthor Destroy (0.1ms)[0m   [0;1mDELETE FROM "authors" WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/authors
+Completed in 10ms (DB: 0) | 302 Found [http://0.0.0.0/authors/1]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:10:09) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 22:10:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/authors/2]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 22:10:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAuthor Load (0.1ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors/2/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 22:11:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAuthor Load (0.1ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/authors/2/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#update (for 127.0.0.1 at 2011-02-20 22:11:12) [PUT]
+  Parameters: {"commit"=>"Update", "author"=>{"photo"=>#<File:/tmp/RackMultipart20110220-11209-d0sxgm-0>, "name"=>"e test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4=", "id"=>"2"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-nedugo-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-nedugo-0.JPG[0]' -resize "300x300>" '/tmp/stream20110220-11209-nedugo-020110220-11209-d4yqa-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-nedugo-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-nedugo-0.JPG[0]' -resize "100x100>" '/tmp/stream20110220-11209-nedugo-020110220-11209-79fi71-0' 2>/dev/null
+  [4;36;1mAuthor Update (0.3ms)[0m   [0;1mUPDATE "authors" SET "updated_at" = '2011-02-21 05:11:13', "photo_file_name" = 'IMG_0320.JPG', "photo_file_size" = 2743137, "photo_updated_at" = '2011-02-21 05:11:12' WHERE "id" = 2[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /home/memeyou/Documents/csci446/project05/public/system/photos/2/original/IMG_0311.JPG
+[paperclip] deleting /home/memeyou/Documents/csci446/project05/public/system/photos/2/medium/IMG_0311.JPG
+[paperclip] deleting /home/memeyou/Documents/csci446/project05/public/system/photos/2/thumb/IMG_0311.JPG
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/2/medium/IMG_0320.JPG
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/2/thumb/IMG_0320.JPG
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/2/original/IMG_0320.JPG
+Redirected to http://0.0.0.0:3000/authors/2
+Completed in 1116ms (DB: 0) | 302 Found [http://0.0.0.0/authors/2]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 22:11:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/authors/2]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-20 22:11:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAuthor Load (0.2ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors/2/edit]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:11:30) [GET]
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 22:11:34) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors/new]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 22:11:45) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"name"=>"f test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 22:11:58) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"photo"=>#<File:/tmp/RackMultipart20110220-11209-1qk2t5i-0>, "name"=>"f test"}, "authenticity_token"=>"zA+E3fUSf9im1fh6J0+YM27gy8UJuehuc+t3jQoXnb4="}
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-1jrcuwy-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-1jrcuwy-0.JPG[0]' -resize "300x300>" '/tmp/stream20110220-11209-1jrcuwy-020110220-11209-1eytk2m-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20110220-11209-1jrcuwy-0.JPG[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20110220-11209-1jrcuwy-0.JPG[0]' -resize "100x100>" '/tmp/stream20110220-11209-1jrcuwy-020110220-11209-sjpv88-0' 2>/dev/null
+  [4;36;1mAuthor Create (0.2ms)[0m   [0;1mINSERT INTO "authors" ("name", "created_at", "pic_content_type", "photo_file_size", "updated_at", "pic_updated_at", "photo_file_name", "photo_content_type", "pic_file_size", "photo_updated_at", "pic_file_name") VALUES('f test', '2011-02-21 05:11:59', NULL, 2025685, '2011-02-21 05:11:59', NULL, 'IMG_0337.JPG', 'image/jpeg', NULL, '2011-02-21 05:11:58', NULL)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/3/medium/IMG_0337.JPG
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/3/thumb/IMG_0337.JPG
+[paperclip] saving /home/memeyou/Documents/csci446/project05/public/system/photos/3/original/IMG_0337.JPG
+Redirected to http://0.0.0.0:3000/authors/3
+Completed in 845ms (DB: 0) | 302 Found [http://0.0.0.0/authors]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 22:11:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mAuthor Load (0.2ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 3) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/authors/3]
+DEPRECATION WARNING: Giving :session_key to SessionStore is deprecated, please use :key instead. (called from new at /var/lib/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/middleware_stack.rb:72)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 22:12:03) [GET]
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/authors]
