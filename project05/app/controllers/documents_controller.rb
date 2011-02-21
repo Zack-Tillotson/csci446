@@ -27,7 +27,9 @@ class DocumentsController < ApplicationController
   # GET /documents/new
   # GET /documents/new.xml
   def new
+
     @document = Document.new
+    @authorList = Author.find(:all)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,12 +40,16 @@ class DocumentsController < ApplicationController
   # GET /documents/1/edit
   def edit
     @document = Document.find(params[:id])
+    @authorList = Author.find(:all)
   end
 
   # POST /documents
   # POST /documents.xml
   def create
+
     @document = Document.new(params[:document])
+    @document.edit_count = 0
+    @authorList = Author.find(:all)
 
     respond_to do |format|
       if @document.save

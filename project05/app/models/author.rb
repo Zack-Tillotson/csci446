@@ -8,6 +8,6 @@ class Author < ActiveRecord::Base
 
 private
   def no_author_of_ill_repute
-    errors.add(:name, 'Sally is not allowed to be an author') if name == "Sally"
+    errors.add(:author, 'Sally is not allowed to write anything here') if name.downcase =~ /sally/
   end
 end

@@ -14,7 +14,8 @@
   </p>
   <p class="doc-item">
     <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= collection_select(:document, :author, @authorList, :name, :name, options ={:prompt => 'Select An Author'}) %>
+    <%= link_to "Enter New Author", new_author_path %>
   </p>
   <p class="doc-item">
     <%= f.label :body %>
