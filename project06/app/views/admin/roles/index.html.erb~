@@ -4,12 +4,13 @@
   <tr>
     <th>Role name</th>
   </tr>
+
 <% @roles.each do |role| %>
   <tr>
     <td><%=h role.role_name %></td>
-    <td><%= link_to 'Show', admin_role_path(role) %></td>
+    <td><%= link_to 'Show', role %></td>
     <td><%= link_to 'Edit', edit_admin_role_path(role) %></td>
-    <td><%= link_to 'Destroy', admin_role_path(role), :confirm => 'Are you sure?', :method => :delete %></td>    
+    <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
