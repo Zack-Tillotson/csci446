@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   end
   
   belongs_to :role
+  has_many :games
   
   default_scope :include => [:role]
   

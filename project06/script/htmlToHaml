@@ -1,0 +1,7 @@
+#!/bin/sh
+#converts all erb files in all subdirs into haml files
+for htmlfile in `find . -name '*.erb'`
+do
+        name=`echo $htmlfile | sed 's/.erb/.haml/'`
+        html2haml $htmlfile $name
+done

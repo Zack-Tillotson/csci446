@@ -1,0 +1,21 @@
+%p
+  %b Username:
+  = h @user.login
+%p
+  %b Password:
+  = h @user.password
+%p
+  %b Name first:
+  = h @user.name_first
+%p
+  %b Name last:
+  = h @user.name_last
+%p
+  %b Email:
+  = h @user.email
+%p
+  %b Role:
+  = h @user.role_id
+= link_to 'Edit', edit_admin_user_path(@user)
+|
+\#{link_to 'Back', admin_users_path}

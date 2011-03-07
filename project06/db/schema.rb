@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110306185407) do
+ActiveRecord::Schema.define(:version => 20110306223720) do
+
+  create_table "games", :force => true do |t|
+    t.string   "title"
+    t.string   "rating"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "role_name"
@@ -36,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20110306185407) do
     t.string   "crypted_password",   :default => "", :null => false
     t.string   "password_salt",      :default => "", :null => false
     t.string   "password",           :default => "", :null => false
+    t.integer  "user_id"
   end
 
 end

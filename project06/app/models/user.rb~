@@ -1,5 +1,16 @@
 class User < ActiveRecord::Base
+  
   acts_as_authentic do |c|
-#    c.my_config_option = my_value # for available options see documentation in: Authlogic::ActsAsAuthentic
-  end # block optional
+    c.login_field = :login
+    c.email_field = :email
+  end
+  
+  belongs_to :role
+  
+  default_scope :include => [:role]
+  
+  def role_symbols
+    [role.role_name.downcase.to_sym]
+  end
+  
 end

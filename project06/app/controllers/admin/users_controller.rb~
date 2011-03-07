@@ -1,4 +1,4 @@
-class Admin::UsersController < Admin::ApplicationController
+class Admin::UsersController < Admin::AdminController
   
   
   # GET /users
@@ -43,10 +43,16 @@ class Admin::UsersController < Admin::ApplicationController
   # POST /users.xml
   def create
     @user = User.new(params[:user])
+    
+    if !verify_recaptcha      
+      flash[:error] = "There was an error with the recaptcha code below. Please re-enter the code and click submit." 
+      render :action => 'new'
+      return
+    end 
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+        format.html { redirect_to([:admin, @user], :notice => 'User was successfully created.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
@@ -62,7 +68,7 @@ class Admin::UsersController < Admin::ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
+        format.html { redirect_to([:admin, @user], :notice => 'User was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +84,7 @@ class Admin::UsersController < Admin::ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to(users_url) }
+      format.html { redirect_to(admin_users_url) }
       format.xml  { head :ok }
     end
   end

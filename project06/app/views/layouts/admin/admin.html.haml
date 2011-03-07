@@ -1,0 +1,26 @@
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
+    %title
+      Users: #{controller.action_name}
+    = stylesheet_link_tag 'scaffold'
+    = stylesheet_link_tag 'main'
+  %body
+    #page-header
+      Logged in as 
+      %a.link{:href => edit_admin_user_path(current_user)}= current_user().name_first+" "+current_user().name_last
+      , admin.
+      %a.link{:href => "/admin/"} Admin
+      %a.link{:href => admin_user_path(current_user)} My Games
+      %a.link{:href => "/login/"} Login
+      %a.link{:href => "/users/new/"} Register
+      %a.link{:href => "/logout/"} Logout
+      #page-title
+        %a{:href => "/"} Gamez
+        Admin
+    #page-menu
+      %a{:href => admin_games_path} Games
+      %a{:href => admin_users_path} Users
+      %a{:href => admin_roles_path} Roles
+    %p{:style => "color: green"}= notice
+    = yield

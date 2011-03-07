@@ -10,6 +10,10 @@ Rails::Initializer.run do |config|
   
   config.gem "authlogic"
   config.gem "declarative_authorization"
+  config.gem "haml"
+  config.gem "paperclip"
+  config.gem "will_paginate"
+  config.gem "recaptcha", :lib => "recaptcha/rails"
   
   config.time_zone = 'UTC'
 

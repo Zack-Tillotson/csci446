@@ -4,6 +4,6 @@ class ChangeUserAddPassword < ActiveRecord::Migration
   end
 
   def self.down
-    remove :users, :password
+    remove_column :users, :password
   end
 end

@@ -1,0 +1,13 @@
+%h1 Listing roles
+= link_to 'New role', new_admin_role_path
+%table
+  %tr
+    %th Role name
+    %th Number Of Users
+  - @roles.each do |role|
+    %tr
+      %td
+        %a{:href => edit_admin_role_path(role)}= h role.role_name
+      %td= get_total_user_count(role.id)
+        
+%br/

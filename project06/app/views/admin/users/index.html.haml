@@ -1,0 +1,15 @@
+%h1 Users
+= will_paginate @userRefs
+%table
+  %tr
+    %th Name
+    %th Username
+    %th Last Login
+    %th Number of Games
+  - @users.each do |user|
+    %tr
+    %td
+      %a{:href => edit_admin_user_path(user)}=user.name_first + " " + user.name_last  
+    %td= h user.login
+    %td= h user.last_login_at == nil ? "Never" : user.last_login_at
+    %td= get_total_game_count(user.id)

@@ -1,0 +1,32 @@
+%h1 Editing user
+- form_for([:admin, @user]) do |f|
+  = f.error_messages
+  %p
+    = f.label :login
+    %br/
+    = f.text_field :login
+  %p
+    = f.label :password
+    %br/
+    = f.text_field :password
+  %p
+    = f.label :name_first
+    %br/
+    = f.text_field :name_first
+  %p
+    = f.label :name_last
+    %br/
+    = f.text_field :name_last
+  %p
+    = f.label :email
+    %br/
+    = f.text_field :email
+  %p
+    = f.label :role_id
+    %br/
+    = f.text_field :role_id
+  %p
+    = f.submit 'Update'
+= link_to 'Show', admin_user_path(@user)
+|
+\#{link_to 'Back', admin_users_path}
