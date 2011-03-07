@@ -1,0 +1,15 @@
+%h1 Editing Game
+- form_for([:member, @game]) do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+  %p
+    = f.label :rating
+    %br/
+    = f.text_field :rating
+  %p
+    = f.submit 'Update'
+|
+\#{link_to 'Back', member_games_path}

@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   # GET /roles
   # GET /roles.xml
   def index
-    @gameRefs = Game.paginate(:page => params[:page], :order => 'title ASC')
     
     respond_to do |format|
       format.html # index.html.erb

@@ -14,7 +14,7 @@
       Logged in as 
       %a.link{:href => edit_member_user_path(current_user)}= current_user().name_first+" "+current_user().name_last
       , #{Role.find(current_user().role_id)}.
-      - if Role.find(current_user().role_id) == "admin"
+      - if Role.find(current_user().role_id).role_name == "admin"
         %a.link{:href => "/admin/"} Admin Area        
       %a.link{:href => "/member/"} My Games
       %a.link{:href => "/logout/"} Logout

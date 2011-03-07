@@ -1,0 +1,15 @@
+%h1 My Games
+%a{:href => new_member_game_path} New Game
+= will_paginate @gameRefs
+%table
+  %tr
+    %th Title
+    %th Rating
+    %th Date Added
+  - @gameRefs.each do |game|
+    %tr
+    %td
+      %a{:href => edit_member_game_path(game)}=game.title  
+    %td= h game.rating
+    %td= h game.created_at.strftime("%a %d %Y") + "by me"
+#stats I've created #{pluralize(get_total_game_count(current_user().id), "game")}

@@ -7,22 +7,13 @@
     = stylesheet_link_tag 'main'
   %body
     #page-header
-    - if !current_user()
-      %a.link{:href => "/login/"} Login
-      %a.link{:href => "/register/"} Register
-    - else
       Logged in as 
       %a.link{:href => edit_member_user_path(current_user)}= current_user().name_first+" "+current_user().name_last
-      , #{Role.find(current_user().role_id)}.
-      - if Role.find(current_user().role_id) == "admin"
-        %a.link{:href => "/admin/"} Admin Area        
+      , admin.
       %a.link{:href => "/member/"} My Games
       %a.link{:href => "/logout/"} Logout
       #page-title
         %a{:href => "/"} Gamez
-    #page-menu
-      %a{:href => admin_games_path} Games
-      %a{:href => admin_users_path} Users
-      %a{:href => admin_roles_path} Roles
+        Admin
     %p{:style => "color: green"}= notice
     = yield

@@ -4,6 +4,10 @@ authorization do
   end
   
   role :member do
+    has_permission_on :member_member, :to => :manage
+    has_permission_on :member_users, :to => :manage
+    has_permission_on :member_roles, :to => :manage
+    has_permission_on :member_games, :to => :manage
   end
   
   role :admin do

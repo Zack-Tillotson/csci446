@@ -1,4 +1,4 @@
-%h1 Editing user
+%h1 New user
 - form_for([:admin, @user]) do |f|
   = f.error_messages
   %p
@@ -30,7 +30,5 @@
     %br/
     = f.text_field :role_id
   %p
-    = f.submit 'Update'
-= link_to 'Show', admin_user_path(@user)
-|
-\#{link_to 'Back', admin_users_path}
+    = f.submit 'Create'
+= link_to 'Back', admin_users_path

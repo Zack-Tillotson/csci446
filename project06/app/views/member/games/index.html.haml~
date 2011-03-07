@@ -1,14 +1,14 @@
-%h1 #{Game.all.length} Total Games
+%h1 Games
 %a{:href => new_admin_game_path} New Game
 = will_paginate @gameRefs
 %table
   %tr
     %th Title
     %th Rating
-    %th Date Added
+    %th Creator
   - @gameRefs.each do |game|
     %tr
     %td
       %a{:href => edit_admin_game_path(game)}=game.title  
     %td= h game.rating
-    %td= h game.created_at.strftime("%a %d %Y") + " by " + User.find(game.user_id).name_first + " " + User.find(game.user_id).name_last
+    %td= h User.find(game.user_id).login

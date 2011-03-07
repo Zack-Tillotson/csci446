@@ -1,5 +1,5 @@
-%h1 Editing user
-- form_for([:admin, @user]) do |f|
+%h1 New user
+- form_for  @user do |f|
   = f.error_messages
   %p
     = f.label :login
@@ -26,11 +26,7 @@
     %br/
     = f.text_field :email
   %p
-    = f.label :role_id
-    %br/
-    = f.text_field :role_id
+    = recaptcha_tags
   %p
-    = f.submit 'Update'
-= link_to 'Show', admin_user_path(@user)
-|
-\#{link_to 'Back', admin_users_path}
+    = f.submit 'Create'
+= link_to 'Back', root_path
