@@ -8,11 +8,25 @@
   %p
     = f.label :rating
     %br/
-    = f.text_field :rating
+  %p
+    = f.radio_button :rating, "Excellent"
+    = f.label "Excellent"
+    %br/
+    = f.radio_button :rating, "Good"
+    = f.label "Good"
+    %br/
+    = f.radio_button :rating, "Neutral", :checked => true
+    = f.label "Neutral"
+    %br/
+    = f.radio_button :rating, "Bad"
+    = f.label "Bad"
+    %br/
+    = f.radio_button :rating, "Terrible"
+    = f.label "Terrible"
   %p
     = f.label :user_id
     %br/
-    = f.text_field :user_id
+    = collection_select(:game, :user_id, User.all, :id, :name_first, options = {:prompt => "Select user"}, :class=>"game")
   %p
     = f.submit 'Create'
 = link_to 'Back', admin_games_path

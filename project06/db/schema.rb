@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110306223720) do
+ActiveRecord::Schema.define(:version => 20110307025434) do
 
   create_table "games", :force => true do |t|
     t.string   "title"
@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(:version => 20110306223720) do
     t.string   "password_salt",      :default => "", :null => false
     t.string   "password",           :default => "", :null => false
     t.integer  "user_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.string   "photo_url"
   end
 
 end

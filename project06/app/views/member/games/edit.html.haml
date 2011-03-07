@@ -7,8 +7,21 @@
     = f.text_field :title
   %p
     = f.label :rating
-    %br/
-    = f.text_field :rating
+  %p
+    = f.radio_button :rating, "Excellent", :checked => (@game.rating=="Excellent"?true:false)
+    = f.label "Excellent"
+    %br
+    = f.radio_button :rating, "Good", :checked => (@game.rating=="Good"?true:false)
+    = f.label "Good"
+    %br
+    = f.radio_button :rating, "Neutral", :checked => (@game.rating=="Neutral"?true:false)
+    = f.label "Neutral"
+    %br
+    = f.radio_button :rating, "Bad", :checked => (@game.rating=="Bad"?true:false)
+    = f.label "Bad"
+    %br
+    = f.radio_button :rating, "Terrible", :checked => (@game.rating=="Terrible"?true:false)
+    = f.label "Terrible"
   %p
     = f.submit 'Update'
 |

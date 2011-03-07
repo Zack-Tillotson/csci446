@@ -30,5 +30,7 @@
     %br/
     = f.text_field :role_id
   %p
+    = recaptcha_tags
+  %p
     = f.submit 'Create'
 = link_to 'Back', admin_users_path

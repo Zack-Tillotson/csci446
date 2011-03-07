@@ -12,7 +12,7 @@ class Member::UsersController < Member::MemberController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to(member_users_path, :notice => 'Successfully updated profile') }
+        format.html { redirect_to("/member/", :notice => 'Successfully updated profile') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit", :notice => "Could not save profile" }

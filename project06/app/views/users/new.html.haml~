@@ -1,5 +1,4 @@
 %h1 New user
-=@user.to_yaml
 - form_for  @user do |f|
   = f.error_messages
   %p

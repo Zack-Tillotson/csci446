@@ -1,5 +1,5 @@
 %h1 Editing user
-- form_for([:admin, @user]) do |f|
+- form_for([:admin, @user],:html => { :multipart => true }) do |f|
   = f.error_messages
   %p
     = f.label :login
@@ -29,6 +29,16 @@
     = f.label :role_id
     %br/
     = f.text_field :role_id
+  %p
+    = f.label 'Photo'
+    %br/
+    = f.file_field :photo
+    = image_tag @f.photo.url
+    - if @user.photo.exists?
+      = @user.photo.url
+      = image_tag @user.photo.url
+    - else
+      No photo uploaded yet
   %p
     = f.submit 'Update'
 = link_to 'Show', admin_user_path(@user)

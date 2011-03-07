@@ -5,8 +5,15 @@ class User < ActiveRecord::Base
     c.email_field = :email
   end
   
+  validates_uniqueness_of :login
+  
   belongs_to :role
   has_many :games
+  
+  has_attached_file :photo,
+   :styles => {
+    :thumb=> "100x100#",
+    :large =>   "400x400>" }
   
   default_scope :include => [:role]
   
