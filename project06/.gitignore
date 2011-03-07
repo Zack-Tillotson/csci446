@@ -2,3 +2,5 @@ log/*.log
 tmp/*
 tmp/**/*
 db/*.sqlite3
+public/*.JPG
+public/*.jpg
